@@ -1,0 +1,35 @@
+.sidebar-menu-dropdown {
+  display: none; /* Initially hide the dropdown */
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  transition: max-height 0.3s ease-out; /* Add transition for smooth opening */
+  overflow: hidden; /* Hide overflow to avoid showing items when closed */
+}
+
+.sidebar-menu-dropdown.show {
+  display: block; /* Show dropdown when 'show' class is added */
+  max-height: 500px; /* Set a max height to enable transitions (adjust as needed) */
+}
+.left-sidebar {
+  transition: all 0.3s ease;
+  width: 250px;
+}
+
+.left-sidebar.sidebar-collapsed {
+  width: 0;
+  visibility: hidden;
+}
+
+.sidebar-toggle-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  cursor: pointer;
+} 
+
+
+
+
+
+
