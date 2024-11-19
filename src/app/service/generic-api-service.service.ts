@@ -54,7 +54,7 @@ export class GenericApiService {
 
   getList(apiUrl: string) {
     this.headerOptions = this.setHeaders();
-    return this.http.get(environment._apiUrl +apiUrl, { headers: this.headerOptions })
+    return this.http.get(environment._apiUrl+apiUrl, { headers: this.headerOptions })
       .pipe(catchError(async (error) => this.HandleError({ error })));
   }
   logout() {

@@ -1,1 +1,134 @@
-<p>itemunit works!</p>
+<div class="container-fluid px-3 py-2">
+
+    <div class="card card-body py-3">
+      <div class="row align-items-center">
+        <div class="col-12">
+          <div class="d-sm-flex align-items-center justify-space-between">
+            <h4 class="mb-4 mb-sm-0 card-title"> <span class="pagetitle">
+                <i class="fas fa-users text-success  font-size-20"></i>&nbsp;
+              Unit Type
+              </span></h4>
+            <nav aria-label="breadcrumb" class="ms-auto">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item d-flex align-items-center">
+                  <a class="text-muted text-decoration-none d-flex" href="./">
+                    <!-- <iconify-icon icon="solar:home-2-line-duotone" class="fs-6"></iconify-icon> -->
+                  </a>
+                </li>
+              </ol>
+  
+            </nav>
+            <div class="col-sm-3">
+              <div style="float:right !important">
+                <button type="submit" class="btn btn-success hstack gap-6" fdprocessedid="fhzngq">
+                  <i class="bx bx-check-double font-size-16  align-middle mr-2"></i><b>Back</b>
+  
+                </button>
+  
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+      
+          <div class="card-body">
+            <div id="education_fields" class="my-4"></div>
+            <form class="row">
+              <div class="col-sm-6">
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="moduleName" placeholder="Item Group" name="moduleName"
+                   />
+                </div>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" placeholder="Enter Text" rows="5"></textarea>
+              </div>
+              <div class="col-sm-6">
+                <div class="mb-3">
+                  <select id="status" style="width:100%;" class="form-control" name="status"
+                  >
+                    <option [value]="true">Active</option>
+                    <option [value]="false">Deactive</option>
+                  </select>
+                </div>
+  
+              </div>
+              <div class="col-md-12 col-xl-12 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0 ms-4">
+                <button type="submit"  class="btn btn-warning hstack gap-6" fdprocessedid="fhzngq">
+                  <i class="bx bx-revision  font-size-16 align-middle"></i><b>Reset</b>
+  
+                </button>
+                &nbsp;&nbsp;
+                <button type="submit"  class="btn btn-success hstack gap-6" fdprocessedid="fhzngq">
+                  <i class="bx bx-check-double font-size-16  align-middle"></i><b>Create</b>
+  
+                </button>
+  
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+  
+        <div class="card card-body">
+          <div class="card card-body py-1">
+        
+            <div class="row">
+              <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                <input type="text"  class="form-control" placeholder="Search">
+              </div>
+            </div>
+            
+            </div>
+         
+          <div class="table-responsive">
+            <table class="table search-table align-middle text-nowrap">
+              <thead class="header-item">
+                <tr>
+                  <th>S No.</th>
+                  <th>Item Group</th>
+                  <th>Description</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- start row -->
+                <tr class="search-items">
+                  <td></td>
+                  <td>
+                  
+                  </td>
+                  <td >
+                    <span class="badge bg-success-subtle text-success">ACTIVE</span>
+                  </td>
+                  <td >
+                    <span class="badge bg-danger-subtle text-danger">DEACTIVE</span>
+                  </td>
+                  <td>
+                    <div class="action-btn">
+                      <a href="javascript:void(0);" class="action-icon text-success"> <i
+                          class="fs-4 ti ti-edit"></i></a>
+  
+                      <a href="javascript:void(0);"  title="Add Sub Module"
+                        class="action-icon text-success ml-1 "> <i class="fs-4 ti ti-plus"></i></a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

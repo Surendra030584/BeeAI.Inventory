@@ -10,21 +10,24 @@ import { SupplierComponent } from './supplier/supplier.component';
 import { TaxComponent } from './tax/tax.component';
 import { ItemunitComponent } from './itemunit/itemunit.component';
 import { ItemcolorComponent } from './itemcolor/itemcolor.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
   declarations: [
-    ItemgroupComponent,
     ItemcreationComponent,
-    ItemcategoryComponent,
     SuppliertypeComponent,
     SupplierComponent,
     TaxComponent,
     ItemunitComponent,
-    ItemcolorComponent
+ 
   ],
-  imports: [
+  imports: [ ReactiveFormsModule,
+    FormsModule,
+    BrowserModule,
     CommonModule,
+      
     InventorymasterRoutingModule
   ]
 })

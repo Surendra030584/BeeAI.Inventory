@@ -1,1 +1,112 @@
-<p>itemcolor works!</p>
+<div class="container-fluid px-3 py-2">
+  <div class="card card-body py-3">
+    <div class="row align-items-center">
+      <div class="col-12">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <h4 class="mb-4 mb-sm-0 card-title">
+            <span class="pagetitle">
+              <i class="fas fa-users text-success font-size-20"></i>&nbsp;Color Type
+            </span>
+          </h4>
+          <nav aria-label="breadcrumb" class="ms-auto">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item d-flex align-items-center">
+                <a class="text-muted text-decoration-none d-flex" href="./"></a>
+              </li>
+            </ol>
+          </nav>
+          <div>
+            <button type="button" class="btn btn-success">
+              <i class="bx bx-check-double font-size-16 align-middle mr-2"></i>
+              <b>Back</b>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <form [formGroup]="ColortypeForm" (ngSubmit)="submitForm()">
+            <div class="mb-3">
+              <input type="text" class="form-control" formControlName="value" placeholder="Color Type" />
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" formControlName="description" rows="4" placeholder="Description"></textarea>
+            </div>
+            <div class="mb-3">
+              <select class="form-control" formControlName="status">
+                <option [value]="true">Active</option>
+                <option [value]="false">Deactive</option>
+              </select>
+            </div>
+            <div class="text-end">
+              <button type="button" class="btn btn-warning me-2" (click)="resetForm()">Reset</button>
+              <button type="submit" class="btn btn-success">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex justify-content-end mb-3">
+            <input type="text" class="form-control w-50" placeholder="Search" (keyup)="onKeyUpEvent($event)" />
+          </div>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>SNO</th>
+                  <th>Color Type</th>
+                  <th>Description</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let colortype of itemcolorFilteredList; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ colortype.value }}</td>
+                  <td>{{ colortype.description }}</td>
+                  <td class="text-center">
+                    <span
+                      class="badge"
+                      [ngClass]="colortype.status ? 'badge-success' : 'badge-danger'"
+                    >
+                      {{ colortype.status ? 'Active' : 'Deactive' }}
+                    </span>
+                  </td>
+                  <td class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-success"
+                      (click)="updateForm(colortype.id)"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-danger"
+                      (click)="deleteForm(colortype.id)"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr *ngIf="itemcolorFilteredList.length === 0">
+                  <td colspan="5" class="text-center">No records found</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,161 @@
+<div class="container-fluid">
+
+  <div class="card card-body py-3">
+    <div class="row align-items-center">
+      <div class="col-12">
+        <div class="d-sm-flex align-items-center justify-space-between">
+          <h4 class="mb-4 mb-sm-0 card-title"> <span class="pagetitle">
+              <i class="fas fa-users text-success  font-size-20"></i>&nbsp;
+              Web Module Management <span *ngIf="pagetitle !=''" class="danger">- {{pagetitle}}</span>
+            </span></h4>
+          <nav aria-label="breadcrumb" class="ms-auto">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item d-flex align-items-center">
+                <a class="text-muted text-decoration-none d-flex" href="./">
+                  <!-- <iconify-icon icon="solar:home-2-line-duotone" class="fs-6"></iconify-icon> -->
+                </a>
+              </li>
+            </ol>
+
+          </nav>
+          <div class="col-sm-3">
+            <div style="float:right !important">
+              <button type="submit" class="btn btn-success hstack gap-6" fdprocessedid="fhzngq">
+                <i class="bx bx-check-double font-size-16  align-middle mr-2"></i><b>Back</b>
+
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="border-bottom title-part-padding">
+          <h4 class="card-title mb-0">Dynamic Form Fields</h4>
+        </div>
+        <div class="card-body">
+          <div id="education_fields" class="my-4"></div>
+          <form class="row">
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="moduleName" placeholder="Name" name="moduleName"
+                  #ModuleName="ngModel" [(ngModel)]="modulemaster.moduleName" />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <input type="text" id="url" placeholder="URL" name="url" #Murl="ngModel" [(ngModel)]="modulemaster.url"
+                  class="form-control" />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="icon" placeholder="Icon" name="icon" #MIcon="ngModel"
+                  [(ngModel)]="modulemaster.icon" />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="msno" placeholder="Position" name="msno" #MmSno="ngModel"
+                  [(ngModel)]="modulemaster.mSno" />
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <select id="status" style="width:100%;" class="form-control" name="status" #status="ngModel"
+                  [(ngModel)]="modulemaster.isActive">
+                  <option [value]="true">Active</option>
+                  <option [value]="false">Deactive</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="col-md-12 col-xl-12 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
+              <button type="submit" (click)="resetForm()" class="btn btn-warning hstack gap-6" fdprocessedid="fhzngq">
+                <i class="bx bx-revision  font-size-16 align-middle mr-2"></i><b>Reset</b>
+
+              </button>
+              &nbsp;&nbsp;
+              <button type="submit" (click)="submitForm()" class="btn btn-success hstack gap-6" fdprocessedid="fhzngq">
+                <i class="bx bx-check-double font-size-16  align-middle mr-2"></i><b>Create</b>
+
+              </button>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+
+      <div class="card card-body">
+        <div class="card card-body py-1">
+      
+          <div class="row">
+            <div class="col-lg-8 d-flex align-items-center">
+              <input type="text" (keyup.enter)="searchKeyUp($event)" [(ngModel)]="searchKeyword"
+              class="form-control" placeholder="Name ">&nbsp;&nbsp;
+              <button class="btn btn-success waves-effect waves-light me-2 btn-search"(click)="search()" fdprocessedid="pimyxj">
+                <i class="bi bi-search"></i>
+              </button>
+              <button class="btn btn-warning btn-search"(click)="resetTable()" fdprocessedid="ldq27">
+                <i class="bi bi-arrow-clockwise"></i>
+              </button>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-end align-items-center">
+              <input type="text" (keyup)="onKeyUpEvent($event)" class="form-control" placeholder="Search">
+            </div>
+          </div>
+          
+          </div>
+       
+        <div class="table-responsive">
+          <table class="table search-table align-middle text-nowrap">
+            <thead class="header-item">
+              <tr>
+                <th>Name</th>
+                <th>Postion</th>
+                <th>STATUS</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- start row -->
+              <tr class="search-items" *ngFor="let module of modulemasterFilteredList;let i=index">
+                <td>{{module.moduleName}}</td>
+                <td>
+                  {{module.mSno}}
+                </td>
+                <td *ngIf="module.isActive">
+                  <span class="badge bg-success-subtle text-success">ACTIVE</span>
+                </td>
+                <td *ngIf="!module.isActive">
+                  <span class="badge bg-danger-subtle text-danger">DEACTIVE</span>
+                </td>
+                <td>
+                  <div class="action-btn">
+                    <a href="javascript:void(0);" (click)="updateForm(module)" class="action-icon text-success"> <i
+                        class="fs-4 ti ti-edit"></i></a>
+
+                    <a href="javascript:void(0);" (click)="addsubmodule(module)" title="Add Sub Module"
+                      class="action-icon text-success ml-1 "> <i class="fs-4 ti ti-plus"></i></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

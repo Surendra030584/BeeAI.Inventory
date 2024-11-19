@@ -1,387 +1,133 @@
-<div class="container-fluid">
-    <div class="card card-body py-3">
-        <div class="row align-items-center">
-          <div class="col-12">
-            <div class="d-sm-flex align-items-center justify-space-between">
-              <h4 class="mb-4 mb-sm-0 card-title">Subscription Manager</h4>
-              <nav aria-label="breadcrumb" class="ms-auto">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item d-flex align-items-center">
-                    <a class="text-muted text-decoration-none d-flex" href="./">
-                      <!-- <iconify-icon icon="solar:home-2-line-duotone" class="fs-6"></iconify-icon> -->
-                    </a>
-                  </li>
-                </ol>
-              
-              </nav>
-              <div class="col-sm-3">
-                <div >
-                  <select class="form-select" id="educationDate" name="educationDate" fdprocessedid="tdyeqs">
-                    <option>Active</option>
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2023">2023</option>
-                    <option value="2023">2023</option>
-                  </select>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="border-bottom title-part-padding">
-            <h4 class="card-title mb-0">Dynamic Form Fields</h4>
-          </div>
-          <div class="card-body">
-            <div id="education_fields" class="my-4"></div>
-            <form class="row">
-              <div class="col-sm-12">
-                <div class="mb-3">
-                  <input type="text" class="form-control" id="Schoolname" name="Schoolname" placeholder="Module Name" fdprocessedid="ylteym">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="mb-3">
-                  <input type="text" class="form-control" id="Age" name="Age" placeholder="Default Price" fdprocessedid="ex5q7n">
-                </div>
-              </div>
-                <div class="col-sm-6">
-                    <div class="mb-3">
-                      <select class="form-select" id="educationDate" name="educationDate" fdprocessedid="tdyeqs">
-                        <option>Default Price</option>
-                        <option value="2015">2015</option>
-                        <option value="2016">2016</option>
-                        <option value="2023">2023</option>
-                        <option value="2023">2023</option>
-                      </select>
-                    </div>
-              </div>
-              <div class="col-sm-12">
-                <div class="mb-3 d">
-                  <input type="text" class="form-control" id="Schoolname" name="Schoolname" placeholder="Maintance Cost(%)" fdprocessedid="ylteym">
-                </div>
-              </div>
-            
-              <div class="col-sm-12">
-                <div class="mb-3">
-                  <select class="form-select" id="educationDate" name="educationDate" fdprocessedid="tdyeqs">
-                    <option>Active</option>
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2023">2023</option>
-                    <option value="2023">2023</option>
-                  </select>
-                </div>
-                
-              </div>
-              <div class="col-md-12 col-xl-12 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0">
-                <a href="javascript:void(0)" id="btn-add-contact" class="btn btn-warning d-flex align-items-right me-2">
-                    <i class="ti ti-users text-white me-1 fs-5"></i> Reset
-                  </a>
-                <a href="javascript:void(0)" id="btn-add-contact" class="btn btn-success d-flex align-items-center">
-                  <i class="ti ti-users text-white me-1 fs-5"></i> Add Contact
+<div class="container-fluid px-3 py-2">
+
+  <div class="card card-body py-3">
+    <div class="row align-items-center">
+      <div class="col-12">
+        <div class="d-sm-flex align-items-center justify-space-between">
+          <h4 class="mb-4 mb-sm-0 card-title"> <span class="pagetitle">
+              <i class="fas fa-users text-success  font-size-20"></i>&nbsp;
+              Item Group
+            </span></h4>
+          <nav aria-label="breadcrumb" class="ms-auto">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item d-flex align-items-center">
+                <a class="text-muted text-decoration-none d-flex" href="./">
+                  <!-- <iconify-icon icon="solar:home-2-line-duotone" class="fs-6"></iconify-icon> -->
                 </a>
-              </div>
-            </form>
+              </li>
+            </ol>
+
+          </nav>
+          <div class="col-sm-3">
+            <div style="float:right !important">
+              <button type="submit" class="btn btn-success hstack gap-6" fdprocessedid="fhzngq">
+                <i class="bx bx-check-double font-size-16  align-middle mr-2"></i><b>Back</b>
+
+              </button>
+
+            </div>
+
           </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card card-body">
-            <div class="table-responsive">
-              <table class="table search-table align-middle text-nowrap">
-                <thead class="header-item">
-                  <tr>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Location</th>
-                  <th>Phone</th>
-                  <th>Action</th>
-                </tr></thead>
-                <tbody>
-                  <!-- start row -->
-                  <tr class="search-items">
-                   
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img src="../assets/images/profile/user-10.jpg" alt="avatar" class="rounded-circle" width="35">
-                        <div class="ms-3">
-                          <div class="user-meta-info">
-                            <h6 class="user-name mb-0" data-name="Emma Adams">Emma Adams</h6>
-                            <span class="user-work fs-3" data-occupation="Web Developer">Web Developer</span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <span class="usr-email-addr" data-email="adams&#60;mail.com">adams&#60;mail.com</span>
-                    </td>
-                    <td>
-                      <span class="usr-location" data-location="Boston, USA">Boston, USA</span>
-                    </td>
-                    <td>
-                      <span class="usr-ph-no" data-phone="+1 (070) 123-4567">+91 (070) 123-4567</span>
-                    </td>
-                    <td>
-                      <div class="action-btn">
-                        <a href="javascript:void(0)" class="text-primary edit">
-                          <i class="ti ti-eye fs-5"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="text-dark delete ms-2">
-                          <i class="ti ti-trash fs-5"></i>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <!-- end row -->
-                  <!-- start row -->
-                  <tr class="search-items">
-                    
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img src="../assets/images/profile/user-2.jpg" alt="avatar" class="rounded-circle" width="35">
-                        <div class="ms-3">
-                          <div class="user-meta-info">
-                            <h6 class="user-name mb-0" data-name="Olivia Allen">Olivia Allen</h6>
-                            <span class="user-work fs-3" data-occupation="Web Designer">Web Designer</span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <span class="usr-email-addr" data-email="allen&#60;mail.com">allen&#60;mail.com</span>
-                    </td>
-                    <td>
-                      <span class="usr-location" data-location="Sydney, Australia">Sydney, Australia</span>
-                    </td>
-                    <td>
-                      <span class="usr-ph-no" data-phone="+91 (125) 450-1500">+91 (125) 450-1500</span>
-                    </td>
-                    <td>
-                      <div class="action-btn">
-                        <a href="javascript:void(0)" class="text-primary edit">
-                          <i class="ti ti-eye fs-5"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="text-dark delete ms-2">
-                          <i class="ti ti-trash fs-5"></i>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <!-- end row -->
-                  <!-- start row -->
-                  <tr class="search-items">
-                    
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img src="../assets/images/profile/user-3.jpg" alt="avatar" class="rounded-circle" width="35">
-                        <div class="ms-3">
-                          <div class="user-meta-info">
-                            <h6 class="user-name mb-0" data-name="Isabella Anderson"> Isabella Anderson </h6>
-                            <span class="user-work fs-3" data-occupation="UX/UI Designer">UX/UI Designer</span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <span class="usr-email-addr" data-email="anderson&#60;mail.com">anderson&#60;mail.com</span>
-                    </td>
-                    <td>
-                      <span class="usr-location" data-location="Miami, USA">Miami, USA</span>
-                    </td>
-                    <td>
-                      <span class="usr-ph-no" data-phone="+91 (100) 154-1254">+91 (100) 154-1254</span>
-                    </td>
-                    <td>
-                      <div class="action-btn">
-                        <a href="javascript:void(0)" class="text-primary edit">
-                          <i class="ti ti-eye fs-5"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="text-dark delete ms-2">
-                          <i class="ti ti-trash fs-5"></i>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <!-- end row -->
-                  <!-- start row -->
-                  <tr class="search-items">
-                   
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img src="../assets/images/profile/user-4.jpg" alt="avatar" class="rounded-circle" width="35">
-                        <div class="ms-3">
-                          <div class="user-meta-info">
-                            <h6 class="user-name mb-0" data-name="Amelia Armstrong"> Amelia Armstrong </h6>
-                            <span class="user-work fs-3" data-occupation="Ethical Hacker">Ethical Hacker</span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <span class="usr-email-addr" data-email="armstrong&#60;mail.com">armstrong&#60;mail.com</span>
-                    </td>
-                    <td>
-                      <span class="usr-location" data-location="Tokyo, Japan">Tokyo, Japan</span>
-                    </td>
-                    <td>
-                      <span class="usr-ph-no" data-phone="+91 (154) 199- 1540">+91 (154) 199- 1540</span>
-                    </td>
-                    <td>
-                      <div class="action-btn">
-                        <a href="javascript:void(0)" class="text-primary edit">
-                          <i class="ti ti-eye fs-5"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="text-dark delete ms-2">
-                          <i class="ti ti-trash fs-5"></i>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <!-- end row -->
-                  <!-- start row -->
-                  <tr class="search-items">
-                   
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img src="../assets/images/profile/user-5.jpg" alt="avatar" class="rounded-circle" width="35">
-                        <div class="ms-3">
-                          <div class="user-meta-info">
-                            <h6 class="user-name mb-0" data-name="Emily Atkinson"> Emily Atkinson </h6>
-                            <span class="user-work fs-3" data-occupation="Web developer">Web developer</span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <span class="usr-email-addr" data-email="atkinson&#60;mail.com">atkinson&#60;mail.com</span>
-                    </td>
-                    <td>
-                      <span class="usr-location" data-location="Edinburgh, UK">Edinburgh, UK</span>
-                    </td>
-                    <td>
-                      <span class="usr-ph-no" data-phone="+91 (900) 150- 1500">+91 (900) 150- 1500</span>
-                    </td>
-                    <td>
-                      <div class="action-btn">
-                        <a href="javascript:void(0)" class="text-primary edit">
-                          <i class="ti ti-eye fs-5"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="text-dark delete ms-2">
-                          <i class="ti ti-trash fs-5"></i>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <!-- end row -->
-                  <!-- start row -->
-                  <tr class="search-items">
-                  
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img src="../assets/images/profile/user-12.jpg" alt="avatar" class="rounded-circle" width="35">
-                        <div class="ms-3">
-                          <div class="user-meta-info">
-                            <h6 class="user-name mb-0" data-name="John Deo">John Deo</h6>
-                            <span class="user-work fs-3" data-occupation="UX/UI Designer">UX/UI Designer</span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <span class="usr-email-addr" data-email="bailey&#60;mail.com">bailey&#60;mail.com</span>
-                    </td>
-                    <td>
-                      <span class="usr-location" data-location="New York, USA">New York, USA</span>
-                    </td>
-                    <td>
-                      <span class="usr-ph-no" data-phone="+91 (001) 160- 1845">+91 (001) 160- 1845</span>
-                    </td>
-                    <td>
-                      <div class="action-btn">
-                        <a href="javascript:void(0)" class="text-primary edit">
-                          <i class="ti ti-eye fs-5"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="text-dark delete ms-2">
-                          <i class="ti ti-trash fs-5"></i>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="search-items">
-                  
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img src="../assets/images/profile/user-2.jpg" alt="avatar" class="rounded-circle" width="35">
-                        <div class="ms-3">
-                          <div class="user-meta-info">
-                            <h6 class="user-name mb-0" data-name="Victoria Sharma"> Victoria Sharma </h6>
-                            <span class="user-work fs-3" data-occupation="Project Manager">Project Manager</span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <span class="usr-email-addr" data-email="sharma&#60;mail.com">sharma&#60;mail.com</span>
-                    </td>
-                    <td>
-                      <span class="usr-location" data-location="Miami, USA">Miami, USA</span>
-                    </td>
-                    <td>
-                      <span class="usr-ph-no" data-phone="+91 (110) 180- 1600">+91 (110) 180- 1600</span>
-                    </td>
-                    <td>
-                      <div class="action-btn">
-                        <a href="javascript:void(0)" class="text-primary edit">
-                          <i class="ti ti-eye fs-5"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="text-dark delete ms-2">
-                          <i class="ti ti-trash fs-5"></i>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="search-items">
-                  
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img src="../assets/images/profile/user-3.jpg" alt="avatar" class="rounded-circle" width="35">
-                        <div class="ms-3">
-                          <div class="user-meta-info">
-                            <h6 class="user-name mb-0" data-name="Penelope Baker"> Penelope Baker </h6>
-                            <span class="user-work fs-3" data-occupation="Web Developer">Web Developer</span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <span class="usr-email-addr" data-email="baker&#60;mail.com">baker&#60;mail.com</span>
-                    </td>
-                    <td>
-                      <span class="usr-location" data-location="Edinburgh, UK">Edinburgh, UK</span>
-                    </td>
-                    <td>
-                      <span class="usr-ph-no" data-phone="+91 (405) 483- 4512">+91 (405) 483- 4512</span>
-                    </td>
-                    <td>
-                      <div class="action-btn">
-                        <a href="javascript:void(0)" class="text-primary edit">
-                          <i class="ti ti-eye fs-5"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="text-dark delete ms-2">
-                          <i class="ti ti-trash fs-5"></i>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
       </div>
     </div>
   </div>
+
+ 
+  <div class="row">
+    <div class="col-md-4">
+ 
+      <div class="card">
+    
+        <div class="card-body">
+          <div id="education_fields" class="my-4"></div>
+          <form class="row" (ngSubmit)="submitForm()"  [formGroup]="itemgroupForm">
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <input type="text" class="form-control" formControlName="name" id="moduleName" placeholder="Item Group" name="moduleName"
+                 />
+              </div>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" formControlName="description" placeholder="Enter Text" rows="5"></textarea>
+            </div>
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <select id="status" style="width:100%;"  formControlName="status" class="form-select" name="status"
+                >
+                  <option [value]="true">Active</option>
+                  <option [value]="false">Deactive</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="col-md-12 col-xl-12 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0 ms-4">
+              <button type="button"  class="btn btn-warning hstack gap-6" fdprocessedid="fhzngq" (click)="resetForm()">
+                <i class="bx bx-revision  font-size-16 align-middle"></i><b>Reset</b>
+
+              </button>
+              &nbsp;&nbsp;
+              <button type="submit"  class="btn btn-success hstack gap-6" fdprocessedid="fhzngq" >  
+                <i class="bx bx-check-double font-size-16  align-middle"></i><b>Create</b>
+
+              </button>
+
+            </div>
+          </form>
+        </div>
+      </div>
+ 
+    </div>
+    <div class="col-md-8">
+
+      <div class="card card-body">
+        <div class="card card-body py-1">
+      
+          <div class="row">
+            <div class="col-lg-4 d-flex justify-content-end align-items-center">
+              <input type="text"  class="form-control" placeholder="Search"  (keyup)="onKeyUpEvent($event)">
+            </div>
+          </div>
+          
+          </div>
+       
+        <div class="table-responsive">
+          <table class="table   mb-0  table-centred">
+            <thead>
+                <tr class="thead-light">
+
+                    <th>SNO</th>
+                    <th>ITEM GROUP</th>
+
+                    <th>DESCRIPTION</th>
+                    <th class="text-center">STATUS</th>
+                    <th class="text-center">ACTION</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let itemgroup of itemgroupFilteredList; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{itemgroup.name}}</td>
+
+                    <td>{{itemgroup.description}}</td>
+                    <td *ngIf="itemgroup.status" class="text-center">
+                        <span class="badge badge-pill badge-success">Active</span>
+                    </td>
+
+                    <td *ngIf="!itemgroup.status" class="text-center">
+                        <span class="badge badge-pill badge-danger">Deactive</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="javascript:void(0);" (click)="updateForm(itemgroup.id)" class="action-icon text-success"> <i class="far fa-edit  font-size-14"></i></a>
+                        <a href="javascript:void(0);" (click)="deleteForm(itemgroup.id)" class="action-icon text-danger"> <i class=" bx bxs-trash font-size-14"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
