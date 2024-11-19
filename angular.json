@@ -36,17 +36,18 @@
             ],
             "styles": [
               "src/assets/css/styles.css",
-              "src/assets/css/styles.min.css",
+           
               "src/styles.css"
             ],
             "scripts": [  
+              "src/assets/js/iconify-icon.min.js" ,
               "src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js",
               "src/assets/libs/simplebar/dist/simplebar.min.js",
               "src/assets/js/theme/app.init.js",
               "src/assets/js/theme/theme.js",
               "src/assets/js/theme/app.min.js",
-              "src/assets/js/theme/sidebarmenu-default.js",
-              "src/assets/js/iconify-icon.min.js" 
+              "src/assets/js/theme/sidebarmenu-default.js"
+
                
             ]
           },

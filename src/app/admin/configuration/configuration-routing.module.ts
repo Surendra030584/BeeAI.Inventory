@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Configuration1Component } from './configuration1/configuration1.component';
-
+import { ModulemasterComponent } from './modulemaster/modulemaster.component';
 const routes: Routes = [
+      
+      { path: 'modulemaster/:Id', component: ModulemasterComponent, pathMatch: 'full' },
+ 
+
 ];
 
 @NgModule({

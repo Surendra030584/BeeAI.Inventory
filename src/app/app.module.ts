@@ -9,7 +9,8 @@ import { SignedupComponent } from './signedup/signedup.component';
  
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InventoryModule } from './admin/inventory/inventory.module';
  
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     ToastrModule.forRoot(),
     HttpClientModule,
+    ReactiveFormsModule,
+    InventoryModule
   ],
   providers: [],
   bootstrap: [AppComponent],

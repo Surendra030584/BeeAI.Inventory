@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminlayoutComponent } from './adminlayout/adminlayout.component';
-import { DasboardComponent } from './dasboard/dasboard.component';
-import { Configuration1Component } from './configuration/configuration1/configuration1.component';
-import { SubscriptionManagerComponent } from './configuration/subscription-manager/subscription-manager.component';
+import { DasboardComponent } from './dasboard/dasboard.component'; 
 
 const routes: Routes = [
 
@@ -13,11 +11,15 @@ const routes: Routes = [
     component: AdminlayoutComponent, children: [
       { path: '', component: DasboardComponent, pathMatch: 'full' },
       { path: 'dashboard', component: DasboardComponent, pathMatch: 'full' },
+     
       {
         path: 'configuration',
-      component:Configuration1Component
+        loadChildren: () => import('../admin/configuration/configuration.module').then(m => m.ConfigurationModule),
       },
-     {path:'subscription-manager',component:SubscriptionManagerComponent}
+      {
+        path: 'inventory',
+        loadChildren: () => import('../../app/admin/inventory/inventory.module').then(m => m.InventoryModule),
+      },
   
     ]
   },
