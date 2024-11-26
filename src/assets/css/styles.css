@@ -34733,7 +34733,6 @@ ul {
 }
 
 html[data-boxed-layout=boxed] .container-fluid,html[data-boxed-layout=boxed] .container-lg,html[data-boxed-layout=boxed] .container-md,html[data-boxed-layout=boxed] .container-sm,html[data-boxed-layout=boxed] .container-xl,html[data-boxed-layout=boxed] .container-xxl {
-    max-width: 1200px;
     margin: 0 auto
 }
 

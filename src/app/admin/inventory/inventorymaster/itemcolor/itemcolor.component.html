@@ -32,12 +32,15 @@
         <div class="card-body">
           <form [formGroup]="ColortypeForm" (ngSubmit)="submitForm()">
             <div class="mb-3">
+              <label class="form-label">Color Type:</label>
               <input type="text" class="form-control" formControlName="value" placeholder="Color Type" />
             </div>
             <div class="mb-3">
+              <label class="form-label">Enter Text:</label>
               <textarea class="form-control" formControlName="description" rows="4" placeholder="Description"></textarea>
             </div>
             <div class="mb-3">
+              <label class="form-label">Status:</label>
               <select class="form-control" formControlName="status">
                 <option [value]="true">Active</option>
                 <option [value]="false">Deactive</option>

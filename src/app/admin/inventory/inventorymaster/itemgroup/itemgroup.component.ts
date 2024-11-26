@@ -28,7 +28,12 @@ export class ItemgroupComponent {
         id: [0], 
         name: ['', Validators.required],
         description: [''],
-        status:[true]
+        isActive:[true],
+        academicYearId : [0],
+       createdDate : [new Date()],
+       createdBy: [0],
+        modifiedDate : [new Date()],
+        modifiedBy : [0]
       } 
     );
 
@@ -68,11 +73,14 @@ resetForm() {
   this.itemgroupForm = this.fb.group({
     id: [0],
     name: ['', Validators.required],
-    // startDate: ['', Validators.required],
-    // endDate: ['', Validators.required],
-    // isCurrentAcademicYear: ['', Validators.required]
+     
     description: [''],
-    status:[true]
+    isActive:[true],
+     academicYearId : [0],
+    createdDate : [new Date()],
+    createdBy: [0],
+     modifiedDate : [new Date()],
+     modifiedBy : [0]
   }, {
     // validator:  this.validateDate('startDate', 'endDate')
 });
@@ -92,7 +100,7 @@ submitForm() {
   }
   if (this.itemgroupForm.get('id')?.value === 0) {
     
-      this._genericApiService.postData('api/itemgroups/',JSON.stringify(this.itemgroupForm.value)).subscribe(res => {
+      this._genericApiService.postData('api/itemgroups/', this.itemgroupForm.value).subscribe(res => {
         this.ListItemGroup();
         this.toastr.success('Records has been sucessfully saved', 'SUCCESS!', {
           timeOut: 3000
@@ -123,7 +131,12 @@ submitForm() {
         id: [data.id],
         name: [data.name, Validators.required],
         description: [data.description],
-        status: [data.status]
+        isActive: [data.status],
+        academicYearId : [0],
+       createdDate : [new Date()],
+       createdBy: [0],
+        modifiedDate : [new Date()],
+        modifiedBy : [0]
       }, {
         // validator:  this.validateDate('startDate', 'endDate')
     });
