@@ -43,9 +43,10 @@
           <div class="card-body">
             <div id="education_fields" class="my-4"></div>
             <form class="row" [formGroup]="itemcategoryForm" (ngSubmit)="submitForm()">
-                <div class="col-sm-6">
+                <div class="col-sm-6 col-lg-12">
+                  <label class="form-label">Select Group:</label>
                     <div class="mb-3">
-                      <select id="status" style="width:100%;" class="form-control" name="status"formControlName="itemGroupId"
+                      <select id="status" style="width:100%;" class="form-select" name="status"formControlName="itemGroupId"
                       >
                       <option value="">Select Group</option>
                       <option *ngFor="let itemgroup of itemGroups"  value={{itemgroup.id}}>{{itemgroup.name}}</option>
@@ -53,18 +54,21 @@
                     </div>
       
                   </div>
-              <div class="col-sm-6">
+              <div class="col-sm-6 col-lg-12">
                 <div class="mb-3">
+                  <label class="form-label">Category Name:</label>
                   <input type="text" class="form-control" id="moduleName" placeholder="Category Name" name="moduleName"  formControlName="name"
                    />
                 </div>
               </div>
               <div class="mb-3">
+                <label class="form-label">Enter Text:</label>
                 <textarea class="form-control" placeholder="Enter Text" rows="5" formControlName="description"></textarea>
               </div>
               <div class="col-sm-6">
+                <label class="form-label">Status:</label>
                 <div class="mb-3">
-                  <select id="status" style="width:100%;" class="form-control" name="status" formControlName="status"
+                  <select id="status" style="width:100%;" class="form-select" name="status" formControlName="status"
                   >
                     <option [value]="true">Active</option>
                     <option [value]="false">Deactive</option>
@@ -106,12 +110,12 @@
               <thead>
                   <tr class="thead-light">
                       
-                      <th>SNO</th> 
-                      <th>CATEGORY NAME</th> 
-                      <th>ITEM GROUP</th> 
-                      <th>DESCRIPTION</th> 
-                      <th class="text-center">STATUS</th>
-                      <th   class="text-center">ACTION</th>  
+                      <th>S NO.</th> 
+                      <th>Category Name</th> 
+                      <th>Item Group</th> 
+                      <th>Description</th> 
+                      <th class="text-center">Status</th>
+                      <th   class="text-center">Action</th>  
 
                   </tr>
               </thead>

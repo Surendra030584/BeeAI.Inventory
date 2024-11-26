@@ -1,133 +1,132 @@
-<div class="container-fluid px-3 py-2">
 
-  <div class="card card-body py-3">
-    <div class="row align-items-center">
-      <div class="col-12">
-        <div class="d-sm-flex align-items-center justify-space-between">
-          <h4 class="mb-4 mb-sm-0 card-title"> <span class="pagetitle">
-              <i class="fas fa-users text-success  font-size-20"></i>&nbsp;
-              Item Group
-            </span></h4>
-          <nav aria-label="breadcrumb" class="ms-auto">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item d-flex align-items-center">
-                <a class="text-muted text-decoration-none d-flex" href="./">
-                  <!-- <iconify-icon icon="solar:home-2-line-duotone" class="fs-6"></iconify-icon> -->
-                </a>
-              </li>
-            </ol>
 
-          </nav>
-          <div class="col-sm-3">
-            <div style="float:right !important">
-              <button type="submit" class="btn btn-success hstack gap-6" fdprocessedid="fhzngq">
-                <i class="bx bx-check-double font-size-16  align-middle mr-2"></i><b>Back</b>
-
-              </button>
-
+  <div class="container-fluid m-1 p-4">
+    <div class="card card-body py-3">
+      <div class="row align-items-center">
+        <div class="col-12">
+          <div class="d-sm-flex align-items-center justify-content-between">
+            <h4 class="mb-4 mb-sm-0 card-title">
+              <span class="pagetitle">
+                <i class="fas fa-users text-success font-size-20"></i>&nbsp;
+                Item Group
+              </span>
+            </h4>
+            <nav aria-label="breadcrumb" class="ms-auto">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item d-flex align-items-center">
+                  <a class="text-muted text-decoration-none d-flex" href="./"></a>
+                </li>
+              </ol>
+            </nav>
+            <div class="col-sm-3">
+              <div style="float:right !important">
+                <button type="submit" class="btn btn-success hstack gap-6" fdprocessedid="fhzngq">
+                  <i class="bx bx-check-double font-size-16 align-middle mr-2"></i><b>Back</b>
+                </button>
+              </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
-  </div>
-
- 
-  <div class="row">
-    <div class="col-md-4">
- 
-      <div class="card">
-    
-        <div class="card-body">
-          <div id="education_fields" class="my-4"></div>
-          <form class="row" (ngSubmit)="submitForm()"  [formGroup]="itemgroupForm">
-            <div class="col-sm-6">
-              <div class="mb-3">
-                <input type="text" class="form-control" formControlName="name" id="moduleName" placeholder="Item Group" name="moduleName"
-                 />
+  
+    <div class="row">
+      <!-- Form Section -->
+      <form class="col-lg-5" (ngSubmit)="submitForm()" [formGroup]="itemgroupForm">
+        <div class="card">
+          <div class="card-body">
+            <div class="col-md-4 col-lg-8 mb-3">
+              <label class="form-label" for="validationCustom01">Item Group :</label>
+              <input type="text" class="form-control" id="validationCustom01" formControlName="name" placeholder="First name" value="Mark" required="">
+            </div>
+            <!-- <div class="mb-2 row align-items-center">
+              <label for="exampleInputText1" class="form-label col-sm-3 col-form-label">Item Group</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="exampleInputText1" formControlName="name">
               </div>
+            </div> -->
+            <div class="col-md-4 col-lg-8 mb-3">
+              <label class="form-label">Enter Text:</label>
+              <textarea class="form-control p-7" id="exampleInputText29" cols="20" rows="1" formControlName="description" ></textarea>
             </div>
-            <div class="mb-3">
-              <textarea class="form-control" formControlName="description" placeholder="Enter Text" rows="5"></textarea>
-            </div>
-            <div class="col-sm-6">
-              <div class="mb-3">
-                <select id="status" style="width:100%;"  formControlName="status" class="form-select" name="status"
-                >
+            <!-- <div class="mb-2 row align-items-center">
+              <label for="exampleInputText29" class="form-label col-sm-3 col-form-label">Enter Text</label>
+              <div class="col-sm-9">
+                <textarea class="form-control p-7" id="exampleInputText29" cols="20" rows="1" formControlName="description" ></textarea>
+              </div>
+            </div> -->
+            
+            <div class="col-md-4 col-lg-11 mb-3">
+              <label class="form-label">Status</label>
+              <div class="col-sm-9">
+                <select class="form-select" id="exampleInputselect" aria-label="Default select example" formControlName="isActive">
                   <option [value]="true">Active</option>
                   <option [value]="false">Deactive</option>
                 </select>
               </div>
-
             </div>
-            <div class="col-md-12 col-xl-12 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0 ms-4">
-              <button type="button"  class="btn btn-warning hstack gap-6" fdprocessedid="fhzngq" (click)="resetForm()">
-                <i class="bx bx-revision  font-size-16 align-middle"></i><b>Reset</b>
-
-              </button>
-              &nbsp;&nbsp;
-              <button type="submit"  class="btn btn-success hstack gap-6" fdprocessedid="fhzngq" >  
-                <i class="bx bx-check-double font-size-16  align-middle"></i><b>Create</b>
-
-              </button>
-
+            <div class="row">
+              <div class="col-sm-3"></div>
+              <div class="col-md-12 col-xl-12 text-end d-flex justify-content-md-end justify-content-center mt-3 mt-md-0 ms-4">
+                <button type="button" class="btn btn-warning hstack gap-6" fdprocessedid="fhzngq" (click)="resetForm()">
+                  <i class="bx bx-revision font-size-16 align-middle"></i><b>Reset</b>
+                </button>
+                &nbsp;&nbsp;
+                <button type="submit" class="btn btn-success hstack gap-6" fdprocessedid="fhzngq">
+                  <i class="bx bx-check-double font-size-16 align-middle"></i><b>Create</b>
+                </button>
+              </div>
             </div>
-          </form>
+          </div>
         </div>
-      </div>
- 
-    </div>
-    <div class="col-md-8">
-
-      <div class="card card-body">
-        <div class="card card-body py-1">
-      
-          <div class="row">
-            <div class="col-lg-4 d-flex justify-content-end align-items-center">
-              <input type="text"  class="form-control" placeholder="Search"  (keyup)="onKeyUpEvent($event)">
+      </form>
+  
+      <!-- Table Section -->
+      <div class="col-lg-7">
+        <div class="card card-body">
+          <div class="card card-body py-1">
+            <div class="row">
+              <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                <input type="text" class="form-control" placeholder="Search" (keyup)="onKeyUpEvent($event)">
+              </div>
             </div>
           </div>
-          
-          </div>
-       
-        <div class="table-responsive">
-          <table class="table   mb-0  table-centred">
-            <thead>
+          <div class="table-responsive">
+            <table class="table mb-0 table-centred">
+              <thead>
                 <tr class="thead-light">
-
-                    <th>SNO</th>
-                    <th>ITEM GROUP</th>
-
-                    <th>DESCRIPTION</th>
-                    <th class="text-center">STATUS</th>
-                    <th class="text-center">ACTION</th>
-
+                  <th>SNO</th>
+                  <th>ITEM GROUP</th>
+                  <th>DESCRIPTION</th>
+                  <th class="text-center">STATUS</th>
+                  <th class="text-center">ACTION</th>
                 </tr>
-            </thead>
-            <tbody>
+              </thead>
+              <tbody>
                 <tr *ngFor="let itemgroup of itemgroupFilteredList; let i = index">
-                    <td>{{i+1}}</td>
-                    <td>{{itemgroup.name}}</td>
-
-                    <td>{{itemgroup.description}}</td>
-                    <td *ngIf="itemgroup.status" class="text-center">
-                        <span class="badge badge-pill badge-success">Active</span>
-                    </td>
-
-                    <td *ngIf="!itemgroup.status" class="text-center">
-                        <span class="badge badge-pill badge-danger">Deactive</span>
-                    </td>
-                    <td class="text-center">
-                        <a href="javascript:void(0);" (click)="updateForm(itemgroup.id)" class="action-icon text-success"> <i class="far fa-edit  font-size-14"></i></a>
-                        <a href="javascript:void(0);" (click)="deleteForm(itemgroup.id)" class="action-icon text-danger"> <i class=" bx bxs-trash font-size-14"></i></a>
-                    </td>
+                  <td>{{i+1}}</td>
+                  <td>{{itemgroup.name}}</td>
+                  <td>{{itemgroup.description}}</td>
+                  <td *ngIf="itemgroup.status" class="text-center">
+                    <span class="badge badge-pill badge-success">Active</span>
+                  </td>
+                  <td *ngIf="!itemgroup.status" class="text-center">
+                    <span class="badge badge-pill badge-danger">Deactive</span>
+                  </td>
+                  <td class="text-center">
+                    <a href="javascript:void(0);" (click)="updateForm(itemgroup.id)" class="action-icon text-success">
+                      <i class="far fa-edit font-size-14"></i>
+                    </a>
+                    <a href="javascript:void(0);" (click)="deleteForm(itemgroup.id)" class="action-icon text-danger">
+                      <i class="bx bxs-trash font-size-14"></i>
+                    </a>
+                  </td>
                 </tr>
-            </tbody>
-        </table>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
+  
